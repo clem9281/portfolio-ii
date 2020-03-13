@@ -6,7 +6,10 @@ import ArrowDropDownCircleOutlinedIcon from "@material-ui/icons/ArrowDropDownCir
 
 const useStyles = makeStyles(theme => ({
   button: {
-    pointerEvents: "all"
+    pointerEvents: "all",
+    position: "absolute",
+    bottom: "2.4rem",
+    zIndex: 3
   },
   icon: {
     fontSize: "4rem"

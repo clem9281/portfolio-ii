@@ -5,12 +5,16 @@ import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles(theme => ({
   header: {
+    paddingTop: "1rem",
+    paddingBottom: "1rem",
     fontSize: "1.8rem",
     [theme.breakpoints.up("sm")]: {
-      fontSize: "2.4rem"
+      fontSize: "2.4rem",
+      paddingTop: "2rem"
     }
   },
   headerBody: {
+    // paddingBottom: "2rem",
     [theme.breakpoints.up("sm")]: {
       fontSize: "1.8rem"
     }
