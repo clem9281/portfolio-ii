@@ -2,7 +2,6 @@ import lifeGPA from "../assets/backend-build-lifeGPA.jpg";
 import pSkills from "../assets/prisoner-skills.jpg";
 import bubl from "../assets/bubl.png";
 import endrsd from "../assets/endrsd.png";
-import resume from "../assets/resume-website.jpg";
 
 const projects = [
   {

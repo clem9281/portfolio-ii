@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 
 import Button from "@material-ui/core/Button";
 
@@ -29,7 +29,7 @@ const useStyles = makeStyles(theme => ({
 export default function ProjectCard({ title, imageSrc, description }) {
   const classes = useStyles();
   return (
-    <Grid item key={title} xs={12} sm={6} md={4}>
+    <Grid item xs={12} sm={6} md={4}>
       <Card className={classes.card}>
         <CardMedia
           className={classes.cardMedia}

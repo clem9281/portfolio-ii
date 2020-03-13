@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 
 import Container from "@material-ui/core/Container";
 import Grid from "@material-ui/core/Grid";
@@ -19,14 +19,12 @@ const useStyles = makeStyles(theme => ({
 export default function Album() {
   const classes = useStyles();
   return (
-    <main>
-      <Container className={classes.cardGrid} maxWidth="md">
-        <Grid container spacing={4}>
-          {projects.map(project => (
-            <ProjectCard {...project} />
-          ))}
-        </Grid>
-      </Container>
-    </main>
+    <Container className={classes.cardGrid} maxWidth="md">
+      <Grid container spacing={4}>
+        {projects.map(project => (
+          <ProjectCard key={project.title} {...project} />
+        ))}
+      </Grid>
+    </Container>
   );
 }

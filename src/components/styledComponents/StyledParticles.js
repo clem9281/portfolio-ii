@@ -1,21 +1,25 @@
 import React from "react";
 import Particles from "react-particles-js";
 
-import styled from "styled-components";
+import { makeStyles } from "@material-ui/core/styles";
 
-const StyledParticles = styled(Particles)`
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  top: 0;
-  left: 0;
-  background: transparent;
-  z-index: 1;
-`;
+const useStyles = makeStyles(theme => ({
+  particles: {
+    position: "absolute",
+    height: "100%",
+    width: "100%",
+    top: 0,
+    left: 0,
+    background: "transparent",
+    zIndex: 1
+  }
+}));
 
 const StyledParticlesWithParams = () => {
+  const classes = useStyles();
   return (
-    <StyledParticles
+    <Particles
+      className={classes.particles}
       params={{
         particles: {
           number: {

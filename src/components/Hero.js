@@ -1,63 +1,27 @@
 import React from "react";
-import StyledParticlesWithParams from "./styledComponents/StyledParticles";
 
-import styled from "styled-components";
+import StyledHeader from "./styledComponents/StyledHeader";
+import StyledHeaderButton from "./styledComponents/StyledHeaderButton";
+
+import StyledTypography from "./styledComponents/StyledTypography";
 
 const Hero = () => {
   return (
     <StyledHeader>
-      <StyledParticlesWithParams />
-      <StyledFilter />
-      <StyledInner>
-        <h1>
-          Hi, I'm <strong>Isaac Houle</strong>, a<br />
-          Full-Stack Developer studying at
-          <a href="https://lambdaschool.com/" target="_blank" id="title-link">
-            Lambda School
-          </a>
-          .
-        </h1>
-        <p class="title-description">
-          Versatile, full stack JavaScript developer, with experience building
-          responsive single page applications and REST APIs. Passionate about
-          user driven development and proficient in working asynchronously in a
-          team. Enthusiastic about discovering and implementing new
-          methodologies to solve complex problems.
-        </p>
-        <ul class="actions special">
-          <li>
-            <a href="#three" class="button scrolly">
-              Discover
-            </a>
-          </li>
-        </ul>
-      </StyledInner>
+      <StyledTypography type="header-h1">
+        Hi, I'm <strong>Isaac Houle</strong>, a Full-Stack Developer studying at
+        Lambda School.
+      </StyledTypography>
+      <StyledTypography type="header-body">
+        Versatile, full stack JavaScript developer, with experience building
+        responsive single page applications and REST APIs. Passionate about user
+        driven development and proficient in working asynchronously in a team.
+        Enthusiastic about discovering and implementing new methodologies to
+        solve complex problems.
+      </StyledTypography>
+      <StyledHeaderButton />
     </StyledHeader>
   );
 };
 
 export default Hero;
-
-export const StyledHeader = styled.header`
-  height: 100vh;
-  width: 100vw;
-  position: relative;
-  background: url("https://images.unsplash.com/photo-1523821741446-edb2b68bb7a0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80");
-  display: flex;
-  background-size: cover;
-  background-position: center;
-  justify-content: center;
-  align-items: center;
-  //   filter: brightness(0.75);
-`;
-export const StyledFilter = styled.div`
-  height: 100vh;
-  width: 100vw;
-  position: absolute;
-  z-index: 0;
-  background: rgba(0, 0, 0, 0.2);
-`;
-export const StyledInner = styled.div`
-  position: relative;
-  z-index: 2;
-`;

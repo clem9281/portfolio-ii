@@ -8,10 +8,8 @@ import Hero from "./components/Hero";
 function App() {
   return (
     <ThemeProvider>
-      <div className="App">
-        <Hero />
-        <Album />
-      </div>
+      <Hero />
+      <Album />
     </ThemeProvider>
   );
 }
