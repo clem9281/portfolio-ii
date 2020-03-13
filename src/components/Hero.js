@@ -1,5 +1,5 @@
 import React from "react";
-import StyledParticlesWithParams from "../styledComponents/StyledParticles";
+import StyledParticlesWithParams from "./styledComponents/StyledParticles";
 
 import styled from "styled-components";
 
@@ -8,8 +8,7 @@ const Hero = () => {
     <StyledHeader>
       <StyledParticlesWithParams />
       <StyledFilter />
-      <div class="inner">
-        <span class="icon major fa-code-branch"></span>
+      <StyledInner>
         <h1>
           Hi, I'm <strong>Isaac Houle</strong>, a<br />
           Full-Stack Developer studying at
@@ -32,7 +31,7 @@ const Hero = () => {
             </a>
           </li>
         </ul>
-      </div>
+      </StyledInner>
     </StyledHeader>
   );
 };
@@ -55,5 +54,10 @@ export const StyledFilter = styled.div`
   height: 100vh;
   width: 100vw;
   position: absolute;
+  z-index: 0;
   background: rgba(0, 0, 0, 0.2);
+`;
+export const StyledInner = styled.div`
+  position: relative;
+  z-index: 2;
 `;
