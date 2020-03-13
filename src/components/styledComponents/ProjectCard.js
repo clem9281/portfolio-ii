@@ -37,7 +37,7 @@ export default function ProjectCard({ title, imageSrc, description }) {
           title="Image title"
         ></CardMedia>
         <CardContent className={classes.cardContent}>
-          <Typography gutterBottom variant="h5" component="h2">
+          <Typography gutterBottom variant="h5" component="h3">
             {title}
           </Typography>
           <Typography>{description}</Typography>
