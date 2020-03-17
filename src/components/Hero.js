@@ -7,8 +7,8 @@ import StyledParticlesWithParams from "./styledComponents/StyledParticles";
 import { Container } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 
-const Hero = () => {
-  const classes = useStyles();
+const Hero = ({ background }) => {
+  const classes = useStyles({ background });
   return (
     <Container
       className={classes.container}
@@ -35,17 +35,16 @@ const Hero = () => {
 const useStyles = makeStyles(theme => ({
   container: {
     minHeight: "100vh",
-    background:
-      'url("https://images.unsplash.com/photo-1523821741446-edb2b68bb7a0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80")',
-    backgroundSize: "cover",
-    backgroundPosition: "center",
+    background: props => props.background && `url("${props.background}")`,
+    // background:
+    //   'url("https://images.unsplash.com/photo-1523821741446-edb2b68bb7a0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80")',
+    backgroundSize: props => props.background && "cover",
+    backgroundPosition: props => props.background && "center",
     display: "flex",
     justifyContent: "center",
     flexWrap: "wrap",
     position: "relative",
-    [theme.breakpoints.up("sm")]: {
-      alignItems: "center"
-    },
+    alignItems: "center",
     [theme.breakpoints.up("xl")]: {
       maxHeight: "1000px"
     }

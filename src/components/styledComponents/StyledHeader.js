@@ -8,10 +8,18 @@ const useStyles = makeStyles(theme => ({
     position: "relative",
     zIndex: 2,
     textAlign: "center",
-    padding: "1rem",
-    pointerEvents: "none",
-    [theme.breakpoints.up("sm")]: {
-      padding: "2rem"
+    padding: "2rem",
+    // pointerEvents: "none",
+    animation: `$header-enter 3s ${theme.transitions.easing.easeInOut} 500ms`
+  },
+  "@keyframes header-enter": {
+    "0%": {
+      opacity: 0,
+      transform: "scale(1.2)"
+    },
+    "100%": {
+      opacity: 1,
+      transform: "scale(1)"
     }
   }
 }));

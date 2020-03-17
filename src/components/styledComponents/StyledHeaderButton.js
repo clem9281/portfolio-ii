@@ -8,11 +8,26 @@ const useStyles = makeStyles(theme => ({
   button: {
     pointerEvents: "all",
     position: "absolute",
-    bottom: "2.4rem",
-    zIndex: 3
+    bottom: "2%",
+    zIndex: 3,
+    animation: `$button-enter 1s ${theme.transitions.easing.easeInOut} 2s normal`,
+    [theme.breakpoints.up("md")]: {
+      bottom: "15%"
+    }
+  },
+  "@keyframes button-enter": {
+    "0%": {
+      bottom: "-4rem"
+    }
   },
   icon: {
-    fontSize: "4rem"
+    fontSize: "3rem",
+    [theme.breakpoints.up("sm")]: {
+      fontSize: "3.5rem"
+    },
+    [theme.breakpoints.up("md")]: {
+      fontSize: "4rem"
+    }
   }
 }));
 
