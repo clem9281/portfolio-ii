@@ -43,6 +43,24 @@ const StyledTypography = ({ children, type }) => {
           {children}
         </Typography>
       );
+    case "section-header-title":
+      return (
+        <Typography
+          component="h2"
+          variant="h4"
+          align="center"
+          color="textPrimary"
+          gutterBottom
+        >
+          {children}
+        </Typography>
+      );
+    case "section-header-body":
+      return (
+        <Typography variant="h6" align="center" color="textSecondary" paragraph>
+          {children}
+        </Typography>
+      );
     default:
       return <Typography>{children}</Typography>;
   }

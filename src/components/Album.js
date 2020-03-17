@@ -6,6 +6,7 @@ import Grid from "@material-ui/core/Grid";
 import { makeStyles } from "@material-ui/core/styles";
 
 import ProjectCard from "./styledComponents/ProjectCard";
+import StyledSectionHeader from "./styledComponents/StyledSectionHeader";
 
 import projects from "../utils/projects.js";
 
@@ -19,12 +20,18 @@ const useStyles = makeStyles(theme => ({
 export default function Album() {
   const classes = useStyles();
   return (
-    <Container className={classes.cardGrid} maxWidth="md">
-      <Grid container spacing={4}>
-        {projects.map(project => (
-          <ProjectCard key={project.title} {...project} />
-        ))}
-      </Grid>
-    </Container>
+    <>
+      <StyledSectionHeader
+        title="My Recent Work"
+        subtitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin eget dapibus ante, et pretium nunc. Nulla nec nisl vitae eros molestie efficitur et eu purus"
+      ></StyledSectionHeader>
+      <Container className={classes.cardGrid} maxWidth="md">
+        <Grid container spacing={4}>
+          {projects.map(project => (
+            <ProjectCard key={project.title} {...project} />
+          ))}
+        </Grid>
+      </Container>
+    </>
   );
 }
