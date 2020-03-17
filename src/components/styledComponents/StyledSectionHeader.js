@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Container, Toolbar } from "@material-ui/core";
+import { Container } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import StyledHeader from "./StyledHeader";
 
