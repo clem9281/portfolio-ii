@@ -16,8 +16,8 @@ const Hero = ({ background }) => {
       disableGutters
       component="section"
     >
-      <StyledParticlesWithParams />
       <div className={classes.filter} />
+      <StyledParticlesWithParams />
       <StyledHeader
         title={
           "Hi, I'm Isaac Houle, a Full-Stack Developer studying at Lambda School."

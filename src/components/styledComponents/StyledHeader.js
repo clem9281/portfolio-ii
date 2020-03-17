@@ -6,11 +6,10 @@ import StyledTypography from "./StyledTypography";
 const useStyles = makeStyles(theme => ({
   header: {
     position: "relative",
-    zIndex: 2,
     textAlign: "center",
     padding: "2rem",
-    // pointerEvents: "none",
-    animation: `$header-enter 3s ${theme.transitions.easing.easeInOut} 500ms`
+    pointerEvents: "none",
+    animation: `$header-enter 3s ${theme.transitions.easing.easeInOut} 500ms normal backwards`
   },
   "@keyframes header-enter": {
     "0%": {

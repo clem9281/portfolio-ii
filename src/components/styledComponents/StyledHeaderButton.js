@@ -9,8 +9,7 @@ const useStyles = makeStyles(theme => ({
     pointerEvents: "all",
     position: "absolute",
     bottom: "2%",
-    zIndex: 3,
-    animation: `$button-enter 1s ${theme.transitions.easing.easeInOut} 2s normal`,
+    animation: `$button-enter 1s ${theme.transitions.easing.easeInOut} 2s 1 normal backwards`,
     [theme.breakpoints.up("md")]: {
       bottom: "15%"
     }
