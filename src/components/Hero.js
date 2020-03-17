@@ -19,6 +19,7 @@ const Hero = ({ background }) => {
       <div className={classes.filter} />
       <StyledParticlesWithParams />
       <StyledHeader
+        animation={classes.animation}
         title={
           "Hi, I'm Isaac Houle, a Full-Stack Developer studying at Lambda School."
         }
@@ -36,8 +37,6 @@ const useStyles = makeStyles(theme => ({
   container: {
     minHeight: "100vh",
     background: props => props.background && `url("${props.background}")`,
-    // background:
-    //   'url("https://images.unsplash.com/photo-1523821741446-edb2b68bb7a0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80")',
     backgroundSize: props => props.background && "cover",
     backgroundPosition: props => props.background && "center",
     display: "flex",
@@ -59,6 +58,19 @@ const useStyles = makeStyles(theme => ({
     background: "rgba(0, 0, 0, 0.4)",
     [theme.breakpoints.up("xl")]: {
       maxHeight: "1000px"
+    }
+  },
+  animation: {
+    animation: `$header-enter 3s ${theme.transitions.easing.easeInOut} 500ms normal backwards`
+  },
+  "@keyframes header-enter": {
+    "0%": {
+      opacity: 0,
+      transform: "scale(1.2)"
+    },
+    "100%": {
+      opacity: 1,
+      transform: "scale(1)"
     }
   }
 }));
