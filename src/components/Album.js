@@ -10,11 +10,11 @@ import StyledSectionHeader from "./styledComponents/StyledSectionHeader";
 
 import projects from "../utils/projects.js";
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   cardGrid: {
     paddingTop: theme.spacing(8),
-    paddingBottom: theme.spacing(8)
-  }
+    paddingBottom: theme.spacing(8),
+  },
 }));
 
 const Album = forwardRef((props, ref) => {
@@ -28,34 +28,12 @@ const Album = forwardRef((props, ref) => {
       ></StyledSectionHeader>
       <Container className={classes.cardGrid} maxWidth="md">
         <Grid container spacing={4}>
-          {projects.map(project => (
+          {projects.map((project) => (
             <ProjectCard key={project.title} {...project} />
           ))}
         </Grid>
       </Container>
     </>
   );
-})
+});
 export default Album;
-
-// export default function Album() {
-//   const classes = useStyles();
-//   return forwardRef((props, ref) => {
-//     return (
-//       <>
-//         <StyledSectionHeader
-//           title="My Recent Work"
-//           subtitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin eget dapibus ante, et pretium nunc. Nulla nec nisl vitae eros molestie efficitur et eu purus"
-//           ref={ref}
-//         ></StyledSectionHeader>
-//         <Container className={classes.cardGrid} maxWidth="md">
-//           <Grid container spacing={4}>
-//             {projects.map(project => (
-//               <ProjectCard key={project.title} {...project} />
-//             ))}
-//           </Grid>
-//         </Container>
-//       </>
-//     );
-//   })
-// }
