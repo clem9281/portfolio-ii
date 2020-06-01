@@ -10,13 +10,14 @@ const useStyles = makeStyles(theme => ({
     position: "absolute",
     bottom: "2%",
     animation: `$button-enter 1s ${theme.transitions.easing.easeInOut} 2s 1 normal backwards`,
+    zIndex: 1,
     [theme.breakpoints.up("md")]: {
       bottom: "15%"
     }
   },
   "@keyframes button-enter": {
     "0%": {
-      bottom: "-4rem"
+      bottom: "-4.5rem"
     }
   },
   icon: {

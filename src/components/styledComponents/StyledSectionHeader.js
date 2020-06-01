@@ -6,7 +6,10 @@ import StyledHeader from "./StyledHeader";
 
 const useStyles = makeStyles(theme => ({
   headerContent: {
-    backgroundColor: theme.palette.background.paper
+    backgroundColor: theme.palette.background.paper,
+    // z index set here to hide hero button during its animation
+    zIndex: 2,
+    position: "relative"
   }
 }));
 
