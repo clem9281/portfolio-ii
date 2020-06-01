@@ -11,19 +11,19 @@ import Typography from "@material-ui/core/Typography";
 
 import { makeStyles } from "@material-ui/core/styles";
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   card: {
     height: "100%",
     display: "flex",
-    flexDirection: "column"
+    flexDirection: "column",
   },
   cardMedia: {
     paddingTop: "56.25%", // 16:9
-    backgroundPosition: "top center"
+    backgroundPosition: "top center",
   },
   cardContent: {
-    flexGrow: 1
-  }
+    flexGrow: 1,
+  },
 }));
 
 export default function ProjectCard({ title, imageSrc, description }) {

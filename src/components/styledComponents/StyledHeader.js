@@ -3,13 +3,13 @@ import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import StyledTypography from "./StyledTypography";
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   header: {
     position: "relative",
     textAlign: "center",
     padding: "2rem",
-    pointerEvents: "none"
-  }
+    pointerEvents: "none",
+  },
 }));
 
 const StyledHeader = ({
@@ -17,7 +17,7 @@ const StyledHeader = ({
   subtitle,
   titleType,
   subtitleType,
-  animation
+  animation,
 }) => {
   const classes = useStyles();
   return (
