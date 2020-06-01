@@ -1,4 +1,4 @@
-import React from "react";
+import React, { forwardRef } from "react";
 
 import { Container } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
@@ -13,10 +13,10 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-const StyledSectionHeader = ({ title, subtitle, animation }) => {
+const StyledSectionHeader = forwardRef(({ title, subtitle, animation }, ref) => {
   const classes = useStyles();
   return (
-    <div className={classes.headerContent}>
+    <div className={classes.headerContent} ref={ref}>
       <Container maxWidth="sm">
         <StyledHeader
           title={title}
@@ -27,6 +27,6 @@ const StyledSectionHeader = ({ title, subtitle, animation }) => {
       </Container>
     </div>
   );
-};
+});
 
 export default StyledSectionHeader;

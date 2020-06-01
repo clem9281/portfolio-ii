@@ -7,7 +7,7 @@ import StyledParticlesWithParams from "./styledComponents/StyledParticles";
 import { Container } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 
-const Hero = ({ background }) => {
+const Hero = ({ background, scrollTo, scrollToRef }) => {
   const classes = useStyles({ background });
   return (
     <Container
@@ -29,7 +29,7 @@ const Hero = ({ background }) => {
         titleType="header-h1"
         subtitleType="header-body"
       />
-      <StyledHeaderButton />
+      <StyledHeaderButton scrollTo={scrollTo} scrollToRef={scrollToRef} />
     </Container>
   );
 };

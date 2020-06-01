@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 
 import ThemeProvider from "./components/styledComponents/ThemeProvider";
 
@@ -9,6 +9,16 @@ import Footer from "./components/Footer";
 function App() {
   const [ready, setReady] = useState(false);
   const [heroImage, setHeroImage] = useState(null);
+
+  const [scrollToRef] = useState(useRef(null));
+
+  const scrollTo = (ref) => {
+    window.scrollTo({
+      left: 0,
+      top: ref.current.offsetTop,
+      behavior: "smooth",
+    });
+  };
 
   useEffect(() => {
     const img = new Image();
@@ -23,8 +33,12 @@ function App() {
   if (ready) {
     return (
       <ThemeProvider>
-        <Hero background={heroImage} />
-        <Album />
+        <Hero
+          background={heroImage}
+          scrollToRef={scrollToRef}
+          scrollTo={scrollTo}
+        />
+        <Album ref={scrollToRef} />
         <Footer />
       </ThemeProvider>
     );

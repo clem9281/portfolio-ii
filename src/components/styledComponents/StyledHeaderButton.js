@@ -31,10 +31,10 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-const StyledHeaderButton = () => {
+const StyledHeaderButton = ({ scrollTo, scrollToRef }) => {
   const classes = useStyles();
   return (
-    <IconButton className={classes.button} aria-label="view-my-work">
+    <IconButton className={classes.button} aria-label="view-my-work" onClick={() => scrollTo(scrollToRef)}>
       <ArrowDropDownCircleOutlinedIcon
         className={classes.icon}
         fontSize="large"
