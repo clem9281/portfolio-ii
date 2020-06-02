@@ -51,6 +51,8 @@ const useStyles = makeStyles((theme) => ({
   container: {
     minHeight: "100vh",
     position: "relative",
+    // margin bottom handles issue with interception observer
+    marginBottom: "0.5px",
     [theme.breakpoints.up("xl")]: {
       maxHeight: "1000px",
     },

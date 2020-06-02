@@ -13,11 +13,10 @@ import projects from "../utils/projects.js";
 const Album = forwardRef((props, ref) => {
   const classes = useStyles();
   return (
-    <section className={classes.section}>
+    <section className={classes.section} ref={ref}>
       <StyledSectionHeader
         title="My Recent Work"
         subtitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin eget dapibus ante, et pretium nunc. Nulla nec nisl vitae eros molestie efficitur et eu purus"
-        ref={ref}
       ></StyledSectionHeader>
       <Container className={classes.cardGrid} maxWidth="md">
         <Grid container spacing={4}>

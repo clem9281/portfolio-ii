@@ -7,11 +7,12 @@ import { useEffect, useState } from "react";
  */
 const useVisibility = (ref) => {
   const [isVisible, setIsVisible] = useState(false);
-
   useEffect(() => {
     const current = ref.current;
     const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => setIsVisible(entry.isIntersecting));
+      entries.forEach((entry) => {
+        setIsVisible(entry.isIntersecting);
+      });
     });
     observer.observe(current);
     return () => observer.unobserve(current);
