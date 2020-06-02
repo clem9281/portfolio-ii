@@ -10,17 +10,10 @@ import StyledSectionHeader from "./styledComponents/StyledSectionHeader";
 
 import projects from "../utils/projects.js";
 
-const useStyles = makeStyles((theme) => ({
-  cardGrid: {
-    paddingTop: theme.spacing(8),
-    paddingBottom: theme.spacing(8),
-  },
-}));
-
 const Album = forwardRef((props, ref) => {
   const classes = useStyles();
   return (
-    <>
+    <section className={classes.section}>
       <StyledSectionHeader
         title="My Recent Work"
         subtitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin eget dapibus ante, et pretium nunc. Nulla nec nisl vitae eros molestie efficitur et eu purus"
@@ -33,7 +26,18 @@ const Album = forwardRef((props, ref) => {
           ))}
         </Grid>
       </Container>
-    </>
+    </section>
   );
 });
+
+const useStyles = makeStyles((theme) => ({
+  section: {
+    zIndex: 3,
+    position: "relative",
+  },
+  cardGrid: {
+    paddingTop: theme.spacing(8),
+    paddingBottom: theme.spacing(8),
+  },
+}));
 export default Album;

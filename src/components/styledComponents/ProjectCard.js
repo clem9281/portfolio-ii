@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 
 import {
   Card,
@@ -40,9 +40,10 @@ export default function ProjectCard({
   githubLink,
 }) {
   const classes = useStyles();
+  const cardRef = useRef(null);
   return (
     <Grid item xs={12} sm={6} md={4}>
-      <Card className={classes.card}>
+      <Card className={classes.card} ref={cardRef}>
         <CardMedia
           className={classes.cardMedia}
           image={imageSrc}
@@ -57,7 +58,7 @@ export default function ProjectCard({
         <CardActions className={classes.cardActions}>
           <IconLink
             size="small"
-            color="primary"
+            // color="primary"
             className={classes.button}
             label="view-project-github"
             Icon={GitHubIcon}
@@ -66,7 +67,7 @@ export default function ProjectCard({
 
           <IconLink
             size="small"
-            color="primary"
+            // color="primary"
             className={classes.button}
             label="view-project-on-the-web"
             Icon={WebIcon}

@@ -13,11 +13,7 @@ function App() {
   const [scrollToRef] = useState(useRef(null));
 
   const scrollTo = (ref) => {
-    window.scrollTo({
-      left: 0,
-      top: ref.current.offsetTop,
-      behavior: "smooth",
-    });
+    ref.current.scrollIntoView({ behavior: "smooth" });
   };
 
   useEffect(() => {

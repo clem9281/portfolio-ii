@@ -18,17 +18,6 @@ function Copyright() {
   );
 }
 
-const useStyles = makeStyles((theme) => ({
-  footer: {
-    padding: theme.spacing(3, 2),
-    marginTop: "auto",
-    backgroundColor:
-      theme.palette.type === "light"
-        ? theme.palette.grey[200]
-        : theme.palette.grey[800],
-  },
-}));
-
 export default function Footer() {
   const classes = useStyles();
 
@@ -63,3 +52,14 @@ export default function Footer() {
     </footer>
   );
 }
+
+const useStyles = makeStyles((theme) => ({
+  footer: {
+    padding: theme.spacing(3, 2),
+    marginTop: "auto",
+    backgroundColor:
+      theme.palette.type === "light"
+        ? theme.palette.grey[200]
+        : theme.palette.grey[800],
+  },
+}));
