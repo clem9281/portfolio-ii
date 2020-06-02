@@ -34,6 +34,7 @@ const useStyles = makeStyles((theme) => ({
   section: {
     zIndex: 3,
     position: "relative",
+    backgroundColor: theme.palette.grey["A400"],
   },
   cardGrid: {
     paddingTop: theme.spacing(8),
