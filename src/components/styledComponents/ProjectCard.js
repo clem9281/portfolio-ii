@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 
 import {
   Card,
@@ -12,6 +12,8 @@ import GitHubIcon from "@material-ui/icons/GitHub";
 import WebIcon from "@material-ui/icons/Web";
 import { makeStyles } from "@material-ui/core/styles";
 
+import ProjectDetails from "./ProjectDetails";
+
 import useVisibility from "../../hooks/useVisibility";
 
 import IconLink from "./IconLink";
@@ -22,6 +24,7 @@ export default function ProjectCard({
   description,
   deployment,
   githubLink,
+  altText,
 }) {
   const cardRef = useRef(null);
 
@@ -29,14 +32,35 @@ export default function ProjectCard({
 
   const classes = useStyles({ isVisible });
 
+  const [open, setOpen] = useState(false);
+
+  const handleOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
+
   return (
     <Grid item xs={12} sm={6} md={4} className={classes.item}>
+      <ProjectDetails
+        title={title}
+        imageSrc={imageSrc}
+        description={description}
+        open={open}
+        handleClose={handleClose}
+        altText={altText}
+      />
       <Card className={classes.card} ref={cardRef}>
-        <CardMedia
-          className={classes.cardMedia}
-          image={imageSrc}
-          title={title}
-        ></CardMedia>
+        <div className={classes.outer}>
+          <CardMedia
+            className={classes.cardMedia}
+            image={imageSrc}
+            title={title}
+            onClick={handleOpen}
+          ></CardMedia>
+        </div>
         <CardContent className={classes.cardContent}>
           <Typography gutterBottom variant="h5" component="h3">
             {title}
@@ -83,6 +107,17 @@ const useStyles = makeStyles((theme) => ({
   cardMedia: {
     paddingTop: "56.25%", // 16:9
     backgroundPosition: "top center",
+    transition: theme.transitions.create(["transform"], {
+      duration: "0.5s",
+      easing: theme.transitions.easing.easeInOut,
+    }),
+    "&:hover": {
+      transform: "scale(1.2)",
+      cursor: "pointer",
+    },
+  },
+  outer: {
+    overflow: "hidden",
   },
   cardContent: {
     flexGrow: 1,

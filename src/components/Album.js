@@ -12,6 +12,7 @@ import projects from "../utils/projects.js";
 
 const Album = forwardRef((props, ref) => {
   const classes = useStyles();
+
   return (
     <section className={classes.section} ref={ref}>
       <StyledSectionHeader
@@ -21,7 +22,7 @@ const Album = forwardRef((props, ref) => {
       <Container className={classes.cardGrid} maxWidth="md">
         <Grid container spacing={4}>
           {projects.map((project) => (
-            <ProjectCard key={project.title} {...project} />
+            <ProjectCard {...project} key={project.title} />
           ))}
         </Grid>
       </Container>
