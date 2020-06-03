@@ -3,38 +3,23 @@ import { MuiThemeProvider, createMuiTheme } from "@material-ui/core/styles";
 
 import CssBaseline from "@material-ui/core/CssBaseline";
 
-import {
-  teal,
-  blue,
-  deepPurple,
-  green,
-  yellow,
-  red,
-} from "@material-ui/core/colors";
+import { lightBlue, orange, blue } from "@material-ui/core/colors";
+
 export const theme = createMuiTheme({
   typography: {
     fontFamily: "'Open Sans', 'sans-serif'",
   },
   palette: {
     type: "dark",
-    primary: { main: teal[200], light: teal[50], dark: teal[500] },
-    secondary: {
-      main: deepPurple[800],
-      light: deepPurple[700],
-      dark: deepPurple[900],
-    },
-    success: {
-      main: green[700],
-      light: green[600],
-      dark: green[800],
-    },
-    warning: {
-      main: yellow[800],
-      light: yellow[700],
-      dark: yellow[900],
-    },
-    error: red,
-    info: blue,
+    react: { stroke: lightBlue["A200"], fill: "black" },
+    knex: { stroke: orange[800], fill: "white" },
+    express: { stroke: orange[800], fill: "white" },
+    less: { stroke: "white", fill: blue[900] },
+    html: { stroke: orange[800], fill: "white" },
+    redux: { stroke: orange[800], fill: "white" },
+    postgres: { stroke: orange[800], fill: "white" },
+    javascript: { stroke: orange[800], fill: "white" },
+    sass: { stroke: orange[800], fill: "white" },
   },
 });
 

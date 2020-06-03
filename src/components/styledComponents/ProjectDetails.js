@@ -8,7 +8,14 @@ import {
   DialogContent,
   DialogContentText,
   Box,
+  Chip,
+  Avatar,
+  SvgIcon,
 } from "@material-ui/core";
+
+import StyledChip from "./StyledChip";
+
+import iconDictionary from "../../utils/iconDictionary";
 
 const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
@@ -20,9 +27,9 @@ const ProjectDetails = ({
   imageSrc,
   description,
   altText,
+  skills,
 }) => {
   const classes = useStyles({ imageSrc });
-
   return (
     <Dialog
       open={open}
@@ -40,6 +47,12 @@ const ProjectDetails = ({
         <DialogContentText id="alert-dialog-slide-description">
           {description}
         </DialogContentText>
+        <Box className={classes.skillBox} mb={1}>
+          {skills.map((skill) => {
+            const Logo = iconDictionary["React"];
+            return <StyledChip skill={skill} Logo={Logo} />;
+          })}
+        </Box>
       </DialogContent>
     </Dialog>
   );
@@ -55,6 +68,12 @@ const useStyles = makeStyles((theme) => ({
     width: "100%",
     top: 0,
   },
+  skillBox: {
+    display: "flex",
+    justifyContent: "center",
+    flexWrap: "wrap",
+  },
+
   content: {},
 }));
 

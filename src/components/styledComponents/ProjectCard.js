@@ -7,16 +7,16 @@ import {
   CardMedia,
   Grid,
   Typography,
+  SvgIcon,
 } from "@material-ui/core";
 import GitHubIcon from "@material-ui/icons/GitHub";
 import WebIcon from "@material-ui/icons/Web";
 import { makeStyles } from "@material-ui/core/styles";
 
 import ProjectDetails from "./ProjectDetails";
+import IconLink from "./IconLink";
 
 import useVisibility from "../../hooks/useVisibility";
-
-import IconLink from "./IconLink";
 
 export default function ProjectCard({
   title,
@@ -25,6 +25,7 @@ export default function ProjectCard({
   deployment,
   githubLink,
   altText,
+  skills,
 }) {
   const cardRef = useRef(null);
 
@@ -51,6 +52,7 @@ export default function ProjectCard({
         open={open}
         handleClose={handleClose}
         altText={altText}
+        skills={skills}
       />
       <Card className={classes.card} ref={cardRef}>
         <div className={classes.outer}>
