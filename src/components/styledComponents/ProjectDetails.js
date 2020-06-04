@@ -64,6 +64,21 @@ const useStyles = makeStyles((theme) => ({
     paddingTop: "56.25%",
     overflow: "auto",
     position: "relative",
+    [theme.breakpoints.up("md")]: {
+      "&:: -webkit-scrollbar-track": {
+        boxShadow: "inset 0 0 6px rgba(0,0,0,0.3)",
+        backgroundColor: " #F5F5F5",
+        borderRadius: "10px",
+      },
+      "&::-webkit-scrollbar": {
+        width: "10px",
+        backgroundColor: "#F5F5F5",
+      },
+      "&::-webkit-scrollbar-thumb": {
+        borderRadius: "10px",
+        backgroundColor: theme.palette.grey[600],
+      },
+    },
   },
   image: {
     position: "absolute",
