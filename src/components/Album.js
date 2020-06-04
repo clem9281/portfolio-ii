@@ -19,7 +19,7 @@ const Album = forwardRef((props, ref) => {
         title="My Recent Work"
         subtitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin eget dapibus ante, et pretium nunc. Nulla nec nisl vitae eros molestie efficitur et eu purus"
       ></StyledSectionHeader>
-      <Container className={classes.cardGrid} maxWidth="md">
+      <Container className={classes.cardContainer} maxWidth="md">
         <Grid container spacing={4}>
           {projects.map((project) => (
             <ProjectCard {...project} key={project.title} />
@@ -35,8 +35,10 @@ const useStyles = makeStyles((theme) => ({
     zIndex: 3,
     position: "relative",
     backgroundColor: theme.palette.grey["A400"],
+    // don't want to see scroll bar during animation
+    overflowX: "hidden",
   },
-  cardGrid: {
+  cardContainer: {
     paddingTop: theme.spacing(8),
     paddingBottom: theme.spacing(8),
   },

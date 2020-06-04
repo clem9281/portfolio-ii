@@ -92,18 +92,17 @@ export default function ProjectCard({
 }
 
 const useStyles = makeStyles((theme) => ({
-  item: {
+  item: {},
+  card: {
+    height: "100%",
+    display: "flex",
+    flexDirection: "column",
     opacity: (props) => (props.isVisible ? 1 : 0),
     transform: (props) => (props.isVisible ? "rotateY(0)" : "rotateY(180deg)"),
     transition: theme.transitions.create(["opacity", "transform"], {
       duration: "1s",
       easing: theme.transitions.easing.easeInOut,
     }),
-  },
-  card: {
-    height: "100%",
-    display: "flex",
-    flexDirection: "column",
   },
   cardMedia: {
     paddingTop: "56.25%", // 16:9

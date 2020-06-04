@@ -3,19 +3,19 @@ import React from "react";
 import { Typography } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   header: {
-    fontSize: "1.8rem",
+    fontSize: "1.6rem",
     [theme.breakpoints.up("md")]: {
       fontSize: "2.4rem",
-      paddingTop: "2rem"
-    }
+      paddingTop: "2rem",
+    },
   },
   headerBody: {
     [theme.breakpoints.up("md")]: {
-      fontSize: "1.8rem"
-    }
-  }
+      fontSize: "1.8rem",
+    },
+  },
 }));
 
 const StyledTypography = ({ children, type }) => {

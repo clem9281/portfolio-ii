@@ -45,8 +45,11 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     justifyContent: "center",
     flexWrap: "wrap",
-    alignItems: "center",
     position: "absolute",
+    // alignContent: "space-around",
+    [theme.breakpoints.up("sm")]: {
+      alignItems: "center",
+    },
     [theme.breakpoints.up("md")]: {
       position: "fixed",
     },
@@ -54,6 +57,8 @@ const useStyles = makeStyles((theme) => ({
   container: {
     minHeight: "100vh",
     position: "relative",
+    // don't want to see scroll bar during animation
+    overflowX: "hidden",
     // margin bottom handles issue with interception observer
     marginBottom: "0.5px",
     [theme.breakpoints.up("xl")]: {
