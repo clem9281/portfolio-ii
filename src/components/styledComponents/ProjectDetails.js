@@ -6,7 +6,6 @@ import {
   Dialog,
   DialogTitle,
   DialogContent,
-  DialogContentText,
   Box,
   List,
   ListItem,
@@ -23,7 +22,6 @@ const ProjectDetails = ({
   handleClose,
   title,
   imageSrc,
-  description,
   altText,
   skills,
   highlights,
@@ -51,7 +49,7 @@ const ProjectDetails = ({
         <Box mb={1}>
           <List disablePadding>
             {highlights.map((highlight) => (
-              <ListItem disableGutters>
+              <ListItem disableGutters key={highlight}>
                 <ListItemText primary={highlight} />
               </ListItem>
             ))}
