@@ -1,7 +1,5 @@
 import React, { useEffect, useState, useRef } from "react";
 
-import { Container } from "@material-ui/core";
-
 import ThemeProvider from "./components/styledComponents/ThemeProvider";
 
 import Album from "./components/Album";

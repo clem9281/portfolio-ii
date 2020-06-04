@@ -46,10 +46,7 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "center",
     flexWrap: "wrap",
     position: "absolute",
-    // alignContent: "space-around",
-    [theme.breakpoints.up("sm")]: {
-      alignItems: "center",
-    },
+    alignItems: "center",
     [theme.breakpoints.up("md")]: {
       position: "fixed",
     },
