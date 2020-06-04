@@ -42,11 +42,13 @@ const useStyles = makeStyles((theme) => ({
     backgroundPosition: (props) => props.background && "center",
     height: "100%",
     width: "100%",
-    position: "fixed",
     display: "flex",
     justifyContent: "center",
     flexWrap: "wrap",
     alignItems: "center",
+    [theme.breakpoints.up("md")]: {
+      position: "fixed",
+    },
   },
   container: {
     minHeight: "100vh",
