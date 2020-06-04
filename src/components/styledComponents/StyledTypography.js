@@ -5,7 +5,7 @@ import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles((theme) => ({
   header: {
-    fontSize: "1.6rem",
+    fontSize: "1.8rem",
     [theme.breakpoints.up("md")]: {
       fontSize: "2.4rem",
       paddingTop: "2rem",
