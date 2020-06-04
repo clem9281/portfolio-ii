@@ -1,12 +1,12 @@
-import reactLogo from "../assets/icons/react-icon.png";
-import lessLogo from "../assets/icons/less-icon.png";
-import knexLogo from "../assets/icons/knex-icon.png";
-import javascriptLogo from "../assets/icons/knex-icon.png";
-import expressLogo from "../assets/icons/knex-icon.png";
-import sassLogo from "../assets/icons/knex-icon.png";
-import reduxLogo from "../assets/icons/redux-icon.png";
-import postgresLogo from "../assets/icons/knex-icon.png";
-import htmlLogo from "../assets/icons/knex-icon.png";
+import reactLogo from "../assets/icons/react.svg";
+import lessLogo from "../assets/icons/less.svg";
+import knexLogo from "../assets/icons/knex.svg";
+import javascriptLogo from "../assets/icons/javascript_1.svg";
+import expressLogo from "../assets/icons/nodejs_small.svg";
+import sassLogo from "../assets/icons/sass.svg";
+import reduxLogo from "../assets/icons/redux-icon.svg";
+import postgresLogo from "../assets/icons/pg.svg";
+import htmlLogo from "../assets/icons/html5.svg";
 
 export default {
   react: reactLogo,

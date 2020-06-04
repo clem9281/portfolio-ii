@@ -46,7 +46,7 @@ const ProjectDetails = ({
         </DialogContentText>
         <Box className={classes.skillBox} mb={1}>
           {skills.map((skill) => {
-            const Logo = iconDictionary["React"];
+            const Logo = iconDictionary[skill];
             return <StyledChip skill={skill} Logo={Logo} />;
           })}
         </Box>

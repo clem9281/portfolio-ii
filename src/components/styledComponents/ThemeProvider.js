@@ -3,7 +3,7 @@ import { MuiThemeProvider, createMuiTheme } from "@material-ui/core/styles";
 
 import CssBaseline from "@material-ui/core/CssBaseline";
 
-import { lightBlue, orange, blue, deepPurple } from "@material-ui/core/colors";
+import { lightBlue, blue, deepPurple } from "@material-ui/core/colors";
 
 export const theme = createMuiTheme({
   typography: {
@@ -12,14 +12,14 @@ export const theme = createMuiTheme({
   palette: {
     type: "dark",
     react: { stroke: lightBlue["A200"], fill: "black" },
-    knex: { stroke: orange[800], fill: "white" },
-    express: { stroke: orange[800], fill: "white" },
+    knex: { stroke: "#E16426", fill: "white" },
+    express: { stroke: "#8cc84b", fill: "black" },
     less: { stroke: "white", fill: blue[900] },
-    html: { stroke: orange[800], fill: "white" },
-    redux: { stroke: deepPurple[400], fill: deepPurple[500] },
-    postgres: { stroke: orange[800], fill: "white" },
-    javascript: { stroke: orange[800], fill: "white" },
-    sass: { stroke: orange[800], fill: "white" },
+    html: { stroke: "#e34f26", fill: "white" },
+    redux: { stroke: deepPurple[400], fill: "#764ABC" },
+    postgres: { stroke: blue[300], fill: "#336791" },
+    javascript: { stroke: "#f7df1e", fill: "#f7df1e" },
+    sass: { stroke: "#c69", fill: "#c69" },
   },
 });
 

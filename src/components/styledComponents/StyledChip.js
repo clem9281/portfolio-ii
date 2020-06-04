@@ -5,17 +5,19 @@ import { Avatar, Chip } from "@material-ui/core";
 
 import iconDictionary from "../../utils/iconDictionary";
 
-const StyledAvatar = ({ Logo, skill }) => {
+const StyledAvatar = ({ skill }) => {
   const classes = useStyles({ skill });
+  const image = iconDictionary[skill.toLowerCase()];
   return (
     <Chip
       className={classes.chip}
       key={skill}
       avatar={
         <Avatar
-          alt={"react icon"}
+          alt={`${skill} icon`}
           className={classes.avatar}
-          src={iconDictionary[skill.toLowerCase()]}
+          src={image}
+          aria-hidden={true}
         ></Avatar>
       }
       label={skill}
