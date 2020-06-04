@@ -7,7 +7,6 @@ import {
   CardMedia,
   Grid,
   Typography,
-  SvgIcon,
 } from "@material-ui/core";
 import GitHubIcon from "@material-ui/icons/GitHub";
 import WebIcon from "@material-ui/icons/Web";

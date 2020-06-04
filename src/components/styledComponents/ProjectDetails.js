@@ -8,9 +8,6 @@ import {
   DialogContent,
   DialogContentText,
   Box,
-  Chip,
-  Avatar,
-  SvgIcon,
 } from "@material-ui/core";
 
 import StyledChip from "./StyledChip";
@@ -40,7 +37,7 @@ const ProjectDetails = ({
       aria-describedby="alert-dialog-slide-description"
     >
       <DialogTitle id="alert-dialog-slide-title">{title}</DialogTitle>
-      <DialogContent className={classes.content}>
+      <DialogContent>
         <Box className={classes.imageBounds} mb={1}>
           <img src={imageSrc} className={classes.image} alt={altText} />
         </Box>
@@ -73,8 +70,6 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "center",
     flexWrap: "wrap",
   },
-
-  content: {},
 }));
 
 export default ProjectDetails;

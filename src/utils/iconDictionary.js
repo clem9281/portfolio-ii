@@ -4,7 +4,7 @@ import knexLogo from "../assets/icons/knex-icon.png";
 import javascriptLogo from "../assets/icons/knex-icon.png";
 import expressLogo from "../assets/icons/knex-icon.png";
 import sassLogo from "../assets/icons/knex-icon.png";
-import reduxLogo from "../assets/icons/knex-icon.png";
+import reduxLogo from "../assets/icons/redux-icon.png";
 import postgresLogo from "../assets/icons/knex-icon.png";
 import htmlLogo from "../assets/icons/knex-icon.png";
 
