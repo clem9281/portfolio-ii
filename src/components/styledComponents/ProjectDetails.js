@@ -67,7 +67,7 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.up("md")]: {
       "&:: -webkit-scrollbar-track": {
         boxShadow: "inset 0 0 6px rgba(0,0,0,0.3)",
-        backgroundColor: " #F5F5F5",
+        backgroundColor: "#F5F5F5",
         borderRadius: "10px",
       },
       "&::-webkit-scrollbar": {
