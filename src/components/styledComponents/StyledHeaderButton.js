@@ -24,6 +24,7 @@ const useStyles = makeStyles((theme) => ({
   button: {
     display: "none",
     [theme.breakpoints.up("md")]: {
+      display: "block",
       pointerEvents: "all",
       position: "absolute",
       animation: `$button-enter 1s ${theme.transitions.easing.easeInOut} 2s 1 normal backwards`,
