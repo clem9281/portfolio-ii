@@ -25,6 +25,7 @@ export default function ProjectCard({
   githubLink,
   altText,
   skills,
+  highlights,
 }) {
   const cardRef = useRef(null);
 
@@ -52,6 +53,7 @@ export default function ProjectCard({
         handleClose={handleClose}
         altText={altText}
         skills={skills}
+        highlights={highlights}
       />
       <Card className={classes.card} ref={cardRef}>
         <div className={classes.outer}>
