@@ -34,7 +34,6 @@ const ProjectDetails = ({
       keepMounted
       onClose={handleClose}
       aria-labelledby="alert-dialog-slide-title"
-      aria-describedby="alert-dialog-slide-description"
     >
       <DialogTitle id="alert-dialog-slide-title">{title}</DialogTitle>
       <DialogContent>

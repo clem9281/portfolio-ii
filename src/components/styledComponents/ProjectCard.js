@@ -64,6 +64,7 @@ export default function ProjectCard({
             image={imageSrc}
             title={title}
             onClick={handleOpen}
+            aria-label={`click here for more info about ${title}`}
           >
             <IconButton
               aria-label={`click for more info about ${title}`}
@@ -87,7 +88,7 @@ export default function ProjectCard({
             size="small"
             // color="primary"
             className={classes.button}
-            label="view-project-github"
+            label="view-project-on-github"
             Icon={GitHubIcon}
             url={githubLink}
           />
