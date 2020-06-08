@@ -3,7 +3,7 @@ import { MuiThemeProvider, createMuiTheme } from "@material-ui/core/styles";
 
 import CssBaseline from "@material-ui/core/CssBaseline";
 
-import { lightBlue, blue, deepPurple } from "@material-ui/core/colors";
+import { lightBlue, blue, deepPurple, cyan } from "@material-ui/core/colors";
 
 export const theme = createMuiTheme({
   typography: {
@@ -11,6 +11,9 @@ export const theme = createMuiTheme({
   },
   palette: {
     type: "dark",
+    primary: {
+      main: cyan[400],
+    },
     react: { stroke: lightBlue["A200"], fill: "black" },
     knex: { stroke: "#E16426", fill: "white" },
     express: { stroke: "#8cc84b", fill: "black" },

@@ -9,7 +9,7 @@ const StyledHeaderButton = ({ scrollTo, scrollToRef }) => {
   return (
     <IconButton
       className={classes.button}
-      aria-label="view-my-work"
+      aria-label="view-my-work-button"
       onClick={() => scrollTo(scrollToRef)}
     >
       <ArrowDropDownCircleOutlinedIcon

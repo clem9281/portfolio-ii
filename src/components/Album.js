@@ -1,7 +1,6 @@
 import React, { forwardRef } from "react";
 
-import Container from "@material-ui/core/Container";
-import Grid from "@material-ui/core/Grid";
+import { Container, Grid, Link } from "@material-ui/core";
 
 import { makeStyles } from "@material-ui/core/styles";
 
@@ -17,7 +16,18 @@ const Album = forwardRef((props, ref) => {
     <section className={classes.section} ref={ref}>
       <StyledSectionHeader
         title="My Recent Work"
-        subtitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin eget dapibus ante, et pretium nunc. Nulla nec nisl vitae eros molestie efficitur et eu purus"
+        subtitle={
+          <>
+            These are sme of my most recent and favorite projects. I created
+            this portfolio too, check it out on{" "}
+            <Link
+              href="https://github.com/clem9281/portfolio-ii"
+              className={classes.link}
+            >
+              GitHub
+            </Link>
+          </>
+        }
       ></StyledSectionHeader>
       <Container className={classes.cardContainer} maxWidth="md">
         <Grid container spacing={4}>
@@ -41,6 +51,10 @@ const useStyles = makeStyles((theme) => ({
   cardContainer: {
     paddingTop: theme.spacing(8),
     paddingBottom: theme.spacing(8),
+  },
+  link: {
+    pointerEvents: "all",
+    color: theme.palette.primary.light,
   },
 }));
 export default Album;
