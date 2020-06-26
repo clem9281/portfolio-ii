@@ -5,7 +5,7 @@ import ThemeProvider from "./components/styledComponents/ThemeProvider";
 import Album from "./components/Album";
 import Hero from "./components/Hero";
 import Footer from "./components/Footer";
-import WelcomePage from "./components/WelcomePage";
+import FullPageLoader from "./components/FullPageLoader";
 
 function App() {
   const [ready, setReady] = useState(false);
@@ -30,7 +30,7 @@ function App() {
 
   return (
     <ThemeProvider>
-      <WelcomePage ready={ready}></WelcomePage>
+      <FullPageLoader ready={ready} />
       {ready && (
         <>
           <Hero
