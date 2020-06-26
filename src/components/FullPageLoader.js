@@ -7,7 +7,7 @@ import { makeStyles } from "@material-ui/core/styles";
 
 import { theme } from "./styledComponents/ThemeProvider";
 
-const WelcomePage = ({ ready }) => {
+const WelcomePage = ({ ready, setShowContent }) => {
   const classes = useStyles();
   const [shouldRender, setRender] = useState(ready);
   useEffect(() => {
@@ -15,7 +15,10 @@ const WelcomePage = ({ ready }) => {
   }, [ready]);
 
   const onAnimationEnd = () => {
-    if (ready) setRender(false);
+    if (ready) {
+      setRender(false);
+      setShowContent(true);
+    }
   };
 
   return (

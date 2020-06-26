@@ -4,11 +4,13 @@ import { makeStyles } from "@material-ui/core/styles";
 import { IconButton } from "@material-ui/core";
 import ArrowDropDownCircleOutlinedIcon from "@material-ui/icons/ArrowDropDownCircleOutlined";
 
-const StyledHeaderButton = ({ scrollTo, scrollToRef }) => {
+const StyledHeaderButton = ({ scrollTo, scrollToRef, showContent }) => {
   const classes = useStyles();
   return (
     <IconButton
-      className={classes.button}
+      className={
+        showContent ? `${classes.button} ${classes.animation}` : classes.button
+      }
       aria-label="view-my-work-button"
       onClick={() => scrollTo(scrollToRef)}
     >
@@ -27,14 +29,16 @@ const useStyles = makeStyles((theme) => ({
       display: "block",
       pointerEvents: "all",
       position: "absolute",
-      animation: `$button-enter 1s ${theme.transitions.easing.easeInOut} 2s 1 normal backwards`,
       zIndex: 1,
-      bottom: "15%",
+      bottom: "-4.5rem",
     },
   },
+  animation: {
+    animation: `$button-enter 1s ${theme.transitions.easing.easeInOut} 1s normal forwards`,
+  },
   "@keyframes button-enter": {
-    "0%": {
-      bottom: "-4.5rem",
+    "100%": {
+      bottom: "15%",
     },
   },
   icon: {

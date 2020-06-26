@@ -7,7 +7,7 @@ import StyledParticlesWithParams from "./styledComponents/StyledParticles";
 import { Container } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 
-const Hero = ({ background, scrollTo, scrollToRef }) => {
+const Hero = ({ background, scrollTo, scrollToRef, showContent }) => {
   const classes = useStyles({ background });
   return (
     <Container
@@ -20,7 +20,7 @@ const Hero = ({ background, scrollTo, scrollToRef }) => {
         <div className={classes.filter} />
         <StyledParticlesWithParams />
         <StyledHeader
-          animation={classes.animation}
+          animation={showContent && classes.animation}
           title={
             "Hi, I'm Isaac Houle, a Full-Stack Developer studying at Lambda School."
           }
@@ -30,7 +30,11 @@ const Hero = ({ background, scrollTo, scrollToRef }) => {
           titleType="header-h1"
           subtitleType="header-body"
         />
-        <StyledHeaderButton scrollTo={scrollTo} scrollToRef={scrollToRef} />
+        <StyledHeaderButton
+          scrollTo={scrollTo}
+          showContent={showContent}
+          scrollToRef={scrollToRef}
+        />
       </div>
     </Container>
   );
@@ -77,13 +81,9 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   animation: {
-    animation: `$header-enter 3s ${theme.transitions.easing.easeInOut} 500ms normal backwards`,
+    animation: `$header-enter 2s ${theme.transitions.easing.easeInOut} 0ms normal forwards`,
   },
   "@keyframes header-enter": {
-    "0%": {
-      opacity: 0,
-      transform: "scale(1.2)",
-    },
     "100%": {
       opacity: 1,
       transform: "scale(1)",

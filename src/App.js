@@ -10,6 +10,7 @@ import FullPageLoader from "./components/FullPageLoader";
 function App() {
   const [ready, setReady] = useState(false);
   const [heroImage, setHeroImage] = useState(null);
+  const [showContent, setShowContent] = useState(false);
 
   const [scrollToRef] = useState(useRef(null));
 
@@ -30,14 +31,14 @@ function App() {
 
   return (
     <ThemeProvider>
-      <FullPageLoader ready={ready} />
+      <FullPageLoader ready={ready} setShowContent={setShowContent} />
       {ready && (
         <>
           <Hero
             background={heroImage}
             scrollToRef={scrollToRef}
             scrollTo={scrollTo}
-            ready={ready}
+            showContent={showContent}
           />
           <Album ref={scrollToRef} />
           <Footer />

@@ -10,6 +10,8 @@ const useStyles = makeStyles((theme) => ({
     padding: "2rem",
     pointerEvents: "none",
     width: "100%",
+    opacity: 0,
+    transform: "scale(1.2)",
   },
 }));
 
