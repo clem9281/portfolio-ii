@@ -18,14 +18,16 @@ const Album = forwardRef((props, ref) => {
         title="My Recent Work"
         subtitle={
           <>
-            These are sme of my most recent and favorite projects. I created
+            These are some of my most recent and favorite projects. I created
             this portfolio too, check it out on{" "}
             <Link
               href="https://github.com/clem9281/portfolio-ii"
               className={classes.link}
+              target="_blank"
             >
               GitHub
             </Link>
+            .
           </>
         }
       ></StyledSectionHeader>

@@ -1,7 +1,6 @@
 import React from "react";
 
 import { makeStyles } from "@material-ui/core/styles";
-import { Link } from "@material-ui/core";
 import StyledTypography from "./StyledTypography";
 
 const useStyles = makeStyles((theme) => ({
@@ -10,6 +9,7 @@ const useStyles = makeStyles((theme) => ({
     textAlign: "center",
     padding: "2rem",
     pointerEvents: "none",
+    width: "100%",
   },
 }));
 
@@ -21,7 +21,6 @@ const StyledHeader = ({
   animation,
 }) => {
   const classes = useStyles();
-
   return (
     <header className={`${classes.header} ${animation && animation}`}>
       <StyledTypography type={titleType}>{title}</StyledTypography>

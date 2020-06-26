@@ -5,6 +5,7 @@ import ThemeProvider from "./components/styledComponents/ThemeProvider";
 import Album from "./components/Album";
 import Hero from "./components/Hero";
 import Footer from "./components/Footer";
+import WelcomePage from "./components/WelcomePage";
 
 function App() {
   const [ready, setReady] = useState(false);
@@ -16,6 +17,7 @@ function App() {
     ref.current.scrollIntoView({ behavior: "smooth" });
   };
 
+  // wait for the large hero image to be ready before loading the page
   useEffect(() => {
     const img = new Image();
     img.src =
@@ -26,21 +28,23 @@ function App() {
     };
   }, []);
 
-  if (ready) {
-    return (
-      <ThemeProvider>
-        <Hero
-          background={heroImage}
-          scrollToRef={scrollToRef}
-          scrollTo={scrollTo}
-        />
-        <Album ref={scrollToRef} />
-        <Footer />
-      </ThemeProvider>
-    );
-  } else {
-    return <div>Loading</div>;
-  }
+  return (
+    <ThemeProvider>
+      <WelcomePage ready={ready}></WelcomePage>
+      {ready && (
+        <>
+          <Hero
+            background={heroImage}
+            scrollToRef={scrollToRef}
+            scrollTo={scrollTo}
+            ready={ready}
+          />
+          <Album ref={scrollToRef} />
+          <Footer />
+        </>
+      )}
+    </ThemeProvider>
+  );
 }
 
 export default App;

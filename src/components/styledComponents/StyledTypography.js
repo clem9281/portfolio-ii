@@ -61,6 +61,17 @@ const StyledTypography = ({ children, type }) => {
           {children}
         </Typography>
       );
+    case "welcome-message":
+      return (
+        <Typography
+          variant="h1"
+          component="p"
+          align="center"
+          color="textPrimary"
+        >
+          {children}
+        </Typography>
+      );
     default:
       return <Typography>{children}</Typography>;
   }
