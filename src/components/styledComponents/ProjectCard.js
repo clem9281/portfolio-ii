@@ -37,11 +37,13 @@ export default function ProjectCard({
 
   const [open, setOpen] = useState(false);
 
-  const handleOpen = () => {
+  const handleOpen = (e) => {
+    e.stopPropagation();
     setOpen(true);
   };
 
-  const handleClose = () => {
+  const handleClose = (e) => {
+    e.stopPropagation();
     setOpen(false);
   };
 

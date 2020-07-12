@@ -2,7 +2,7 @@ import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 
 import {
-  Slide,
+  Grow,
   Dialog,
   DialogTitle,
   DialogContent,
@@ -10,13 +10,16 @@ import {
   List,
   ListItem,
   ListItemText,
+  IconButton,
 } from "@material-ui/core";
+import { HighlightOff } from "@material-ui/icons";
 
 import StyledChip from "./StyledChip";
 
 const Transition = React.forwardRef(function Transition(props, ref) {
-  return <Slide direction="up" ref={ref} {...props} />;
+  return <Grow ref={ref} {...props} />;
 });
+
 const ProjectDetails = ({
   open,
   handleClose,
@@ -35,6 +38,9 @@ const ProjectDetails = ({
       onClose={handleClose}
       aria-labelledby="alert-dialog-slide-title"
     >
+      <IconButton className={classes.close} onClick={handleClose}>
+        <HighlightOff />
+      </IconButton>
       <DialogTitle id="alert-dialog-slide-title">{title}</DialogTitle>
       <DialogContent>
         <Box className={classes.imageBounds} mb={3}>
@@ -88,6 +94,11 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     justifyContent: "center",
     flexWrap: "wrap",
+  },
+  close: {
+    position: "absolute",
+    top: theme.spacing(1),
+    right: theme.spacing(1),
   },
 }));
 
