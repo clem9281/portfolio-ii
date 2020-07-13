@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import supportsIntersectionObserver from "../utils/supportsIntersectionObserver";
 
 /**
  * @param {Element} ref ref to the element you want watched
@@ -9,15 +10,17 @@ const useVisibility = (ref) => {
   console.log("run use visibility", ref);
   const [isVisible, setIsVisible] = useState(false);
   useEffect(() => {
-    const current = ref.current;
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        setIsVisible(entry.isIntersecting);
+    if (supportsIntersectionObserver) {
+      const current = ref.current;
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          setIsVisible(entry.isIntersecting);
+        });
       });
-    });
-    if (observer) {
       observer.observe(current);
       return () => observer.unobserve(current);
+    } else {
+      setIsVisible(true);
     }
   }, [ref]);
   return isVisible;
