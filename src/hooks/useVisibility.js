@@ -10,7 +10,7 @@ const useVisibility = (ref) => {
   console.log("run use visibility", ref);
   const [isVisible, setIsVisible] = useState(false);
   useEffect(() => {
-    if (supportsIntersectionObserver) {
+    if (supportsIntersectionObserver()) {
       const current = ref.current;
       const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
