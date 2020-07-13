@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
  * @description tracks if an element has been scrolled to, returning if it is visible or not
  */
 const useVisibility = (ref) => {
+  console.log("run use visibility", ref);
   const [isVisible, setIsVisible] = useState(false);
   useEffect(() => {
     const current = ref.current;
@@ -14,8 +15,10 @@ const useVisibility = (ref) => {
         setIsVisible(entry.isIntersecting);
       });
     });
-    observer.observe(current);
-    return () => observer.unobserve(current);
+    if (observer) {
+      observer.observe(current);
+      return () => observer.unobserve(current);
+    }
   }, [ref]);
   return isVisible;
 };
