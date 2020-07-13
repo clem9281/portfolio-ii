@@ -14,7 +14,12 @@ const useVisibility = (ref) => {
       const current = ref.current;
       const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
-          setIsVisible(entry.isIntersecting);
+          // older browsers may support the intersection observer, but isIntersecting may not work, it may just return undefined
+          if (entry.isIntersecting !== undefined) {
+            setIsVisible(entry.isIntersecting);
+          } else {
+            setIsVisible(true);
+          }
         });
       });
       observer.observe(current);
