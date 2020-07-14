@@ -31,6 +31,7 @@ const useStyles = makeStyles((theme) => ({
       position: "absolute",
       zIndex: 1,
       bottom: "-4.5rem",
+      left: "50%",
     },
   },
   animation: {
