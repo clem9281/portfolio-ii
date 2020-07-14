@@ -38,7 +38,11 @@ const ProjectDetails = ({
       onClose={handleClose}
       aria-labelledby="alert-dialog-slide-title"
     >
-      <IconButton className={classes.close} onClick={handleClose}>
+      <IconButton
+        className={classes.close}
+        onClick={handleClose}
+        aria-label="close-dialog"
+      >
         <HighlightOff />
       </IconButton>
       <DialogTitle id="alert-dialog-slide-title">{title}</DialogTitle>

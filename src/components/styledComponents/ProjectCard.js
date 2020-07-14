@@ -73,7 +73,6 @@ export default function ProjectCard({
               className={classes.icon}
               disableRipple
               variant="contained"
-              onClick={() => console.log("TODO!!!")}
             >
               <TouchAppIcon fontSize="small" />
             </IconButton>

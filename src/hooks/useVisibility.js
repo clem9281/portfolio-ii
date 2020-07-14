@@ -7,7 +7,6 @@ import supportsIntersectionObserver from "../utils/supportsIntersectionObserver"
  * @description tracks if an element has been scrolled to, returning if it is visible or not
  */
 const useVisibility = (ref) => {
-  console.log("run use visibility", ref);
   const [isVisible, setIsVisible] = useState(false);
   useEffect(() => {
     if (supportsIntersectionObserver()) {
