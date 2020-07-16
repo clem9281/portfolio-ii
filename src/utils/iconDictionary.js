@@ -7,6 +7,9 @@ import sassLogo from "../assets/icons/sass.svg";
 import reduxLogo from "../assets/icons/redux-icon.svg";
 import postgresLogo from "../assets/icons/pg.svg";
 import htmlLogo from "../assets/icons/html5.svg";
+import styledComponentsLogo from "../assets/icons/styled-components.svg";
+import materialUiLogo from "../assets/icons/material-ui.svg";
+import djangoLogo from "../assets/icons/django.svg";
 
 export default {
   react: reactLogo,
@@ -18,4 +21,7 @@ export default {
   redux: reduxLogo,
   html: htmlLogo,
   postgres: postgresLogo,
+  "styled-components": styledComponentsLogo,
+  "material-ui": materialUiLogo,
+  django: djangoLogo,
 };

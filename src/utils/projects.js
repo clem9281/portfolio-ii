@@ -2,8 +2,31 @@ import lifeGPA from "../assets/backend-build-lifeGPA.jpg";
 import pSkills from "../assets/prisoner-skills.jpg";
 import bubl from "../assets/bubl.png";
 import endrsd from "../assets/endrsd.png";
+import dungeonGame1 from "../assets/dungeon-game-1.png";
 
 const projects = [
+  {
+    title: "Dungeon Game",
+    description:
+      "Simple dungeon game to demonstrate ability to use Django to generate a dungeon rooms API, then consume that API with an interesting front end",
+    skills: [
+      "Django",
+      "Postgres",
+      "React",
+      "Redux",
+      "Material-UI",
+      "Styled-Components",
+    ],
+    highlights: [
+      "Created a unique room generation algorithm that creates room entries in the database",
+      "Utilized Django and Postgres to create a REST API to serve the room entries as one connected dungeon",
+      "Consumed that API in a React front end using Redux for state management and Material UI and Styled Components for styling",
+    ],
+    githubLink: "https://github.com/CS-Build-Week-1-Dungeon-Game",
+    deployment: "https://dungeonthesecond.netlify.app/",
+    imageSrc: dungeonGame1,
+    altText: "my Dungeon Game",
+  },
   {
     title: "LifeGPA",
     description:
