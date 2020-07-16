@@ -23,6 +23,9 @@ export const theme = createMuiTheme({
     postgres: { stroke: blue[300], fill: "#336791" },
     javascript: { stroke: "#f7df1e", fill: "#f7df1e" },
     sass: { stroke: "#c69", fill: "#c69" },
+    django: { stroke: "#44B78B", fill: "#44B78B" },
+    "material-ui": { stroke: "#0081cb", fill: "#0081cb" },
+    "styled-components": { stroke: "#cb45a2", fill: "#cb45a2" },
   },
 });
 
